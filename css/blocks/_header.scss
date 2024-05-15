@@ -12,6 +12,10 @@
         @media(max-width: 1200px) {
                 flex-wrap: wrap;
             }
+
+        @include mobile{
+            flex-wrap: nowrap;
+        }
     }
 
     &__nav{
@@ -65,9 +69,14 @@
 
     &__button-wrapper{
         display: flex;
-        column-gap: 14px;
+        column-gap: 15px;
         @media(max-width: 1200px) {
                 order: 2;
             }
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: 15px;
+        }
     }
 }
