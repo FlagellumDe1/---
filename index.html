@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./media/favicons/favicon.ico">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Окна Хаус</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__inner container">
+            <a href="#" class="header__logo logo">
+                <img src="./media/images/Logo.png" alt="Логотип компании Окна Хаус" class="logo-image">
+            </a>
+            <nav class="header__nav hidden-mobile">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Услуги</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Продукция</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">О компании</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Портфолио</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Вопрос-ответ</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header__button-wrapper">
+                <button class="button button__order-measuring button_small">Заказать размер</button>
+                <button class="button button__order-calculation button_small">Заказать рассчет</button>
+            </div>
+            <button class="burger-button visible-mobile" onclick="mobileNavOverlay.showModal()">
+                <span class="visually-hidden">Открыть мобильное меню</span>
+            </button>
+        </div>
+    </header>
+    <dialog class="mobile-overlay visible-mobile" id="mobileNavOverlay">
+        <button class="mobile-overlay__close" onclick="mobileNavOverlay.close()"></button>
+        <nav class="mobile-overlay__nav">
+            <ul class="mobile-overlay__nav-list">
+                <li class="mobile-overlay__nav-item"><a href="#" class="mobile-overlay__nav-link">Услуги</a></li>
+                <li class="mobile-overlay__nav-item"><a href="#" class="mobile-overlay__nav-link">Продукция</a></li>
+                <li class="mobile-overlay__nav-item"><a href="#" class="mobile-overlay__nav-link">О компании</a></li>
+                <li class="mobile-overlay__nav-item"><a href="#" class="mobile-overlay__nav-link">Портфолио</a></li>
+                <li class="mobile-overlay__nav-item"><a href="#" class="mobile-overlay__nav-link">Вопрос-ответ</a></li>
+                <li class="mobile-overlay__nav-item"><a href="#" class="mobile-overlay__nav-link">Контакты</a></li>
+            </ul>
+        </nav>
+    </dialog>
+</body>
+
+<script src="./js/main.js"></script>
+</html>

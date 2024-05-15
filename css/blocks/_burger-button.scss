@@ -1,0 +1,27 @@
+.burger-button{
+    order: 4;
+    display: block;
+    width: 50px;
+    aspect-ratio: 1;
+    background-color: inherit;
+    position: relative;
+
+    @include hover{
+        background-color: var(--color-accent);
+    }
+
+    &::after{
+        position: absolute;
+        content: '';
+        display: block;
+        height: 3px;
+        width: 50%;
+        translate: 50%;
+        border-radius: 5%;
+        background-color: black;
+        box-shadow: 0px -8px, 0px 8px;
+
+        
+    }
+
+}

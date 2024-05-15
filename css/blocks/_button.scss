@@ -1,0 +1,32 @@
+.button {
+    border-radius: 3px;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: 14px 12px;
+    transition-duration: var(--transition-time);
+    cursor: pointer;
+    white-space: nowrap;
+
+    &__order-measuring{
+        background-color: var(--color-accent);
+        background-image: url('../media/icons/order-measuring-icon.svg');
+
+        @include hover{
+            background-color: var(--color-accent-hover);
+        }
+    }
+
+    &__order-calculation{
+        background-color: var(--color-violet);
+        background-image: url('../media/icons/order-calculation-icon.svg');
+        
+        @include hover {
+                background-color: var(--color-violet-hover);
+            }
+
+    }
+
+    &_small{
+        padding: 12px 23px 13px 47px;
+    }
+}
