@@ -1,0 +1,129 @@
+.modal-order{
+    min-width: 600px;
+    min-height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    
+    @include mobile{
+        min-width: 380px;
+    }
+
+    @include mobile-S{
+        min-width: 0px;
+        width: 340px;
+        padding: 0px !important;
+    }
+
+    &_measuring{
+        background-color: var(--color-accent);
+    }
+
+    &_calculation{
+        background-color: var(--color-violet);
+    }
+
+    &__title{
+        color: white;
+        display: block;
+        padding-left: 72px;
+        background-image: url('../media/icons/order-measuring-icon.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: 10px;
+        margin-bottom: 30px;
+        
+        @include mobile {
+                width: 300px;
+                padding-left: 0px;
+                background: none;
+                text-align: center;
+            }
+    }
+
+    &__form{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 21px;
+        width: 400px;
+        column-gap: 13px;
+        align-items: center;
+
+        @include mobile{
+            width: 300px;
+        }
+
+        @include mobile-S {
+            width: 200px;
+        }
+    }
+
+    &__input{
+        background-color: white;
+        height: 52px;
+        display: block;
+        width: 100%;
+        border-radius: 3px;
+        padding: 15px;
+        color: black;
+        font-size: 16px;
+
+        &_checkbox{
+            width: 25px;
+            aspect-ratio: 1;
+        }
+
+        &::placeholder{
+            color: var(--color-violet);
+            
+        }
+    }
+
+    label{
+        display: inline;
+    }
+
+    &__send{
+        background-color: white;
+        font-weight: 700;
+        font-size: 16px;
+        padding: 17px 60px;
+        margin: 0 auto;
+
+        &_accent{
+            color: var(--color-accent);
+
+            @include hover {
+                color: var(--color-violet);
+            }
+        }
+        
+        &_violet{
+            color: var(--color-violet);
+            
+                @include hover {
+                    color: var(--color-accent);
+                }
+        }
+
+        @include mobile{
+            padding: 17px 40px;
+        }
+
+        @include mobile-S{
+            padding: 17px 20px;
+        }
+    }
+    
+}
+
+.personal-info-link_violet{
+    color: var(--color-violet);
+}
+
+.personal-info-link_accent {
+    color: var(--color-accent);
+}

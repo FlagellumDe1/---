@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./media/favicons/favicon.ico">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/fancybox.css">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Окна Хаус</title>
 </head>
@@ -25,15 +26,15 @@
                 </ul>
             </nav>
             <div class="header__button-wrapper">
-                <button class="button button__order-measuring button_small">Заказать размер</button>
-                <button class="button button__order-calculation button_small">Заказать рассчет</button>
+                <button class="button button__order-measuring button_small" data-fancybox data-src="#modal-order_measuring">Заказать размер</button>
+                <button class="button button__order-calculation button_small" data-fancybox data-src="#modal-order_calculation">Заказать рассчет</button>
             </div>
             <button class="burger-button visible-mobile" onclick="mobileNavOverlay.showModal()">
                 <span class="visually-hidden">Открыть мобильное меню</span>
             </button>
         </div>
     </header>
-    <dialog class="mobile-overlay visible-mobile" id="mobileNavOverlay">
+    <dialog class="mobile-overlay visible-mobile" id="mobileNavOverlay" >
         <button class="mobile-overlay__close" onclick="mobileNavOverlay.close()"></button>
         <nav class="mobile-overlay__nav">
             <ul class="mobile-overlay__nav-list">
@@ -46,7 +47,44 @@
             </ul>
         </nav>
     </dialog>
+    <dialog class="modal-order modal-order_measuring" style="display: none;" id="modal-order_measuring">
+        <h3 class="modal-order__title">
+            Вызвать замерщика на дом
+        </h3>
+        <form action="" class="modal-order__form" id="measuringForm">
+            <input type="text" id="clientName" class="modal-order__input" placeholder="Ваше имя">
+            <input type="tel" id="clientTel" class="modal-order__input" placeholder="Номер телефона">
+            <input type="email" id="clientEmail" class="modal-order__input" placeholder="E-mail">
+            <input type="checkbox" name="personal-info-agreement" id="personalInfo" class="modal-order__input_checkbox">
+            <label for="personal-info-agreement">
+                Я согласен(на) на обработку 
+                <a href="#" class="personal-info-link personal-info-link_violet">персональных данных</a>
+            </label>
+            <button type="submit" class="modal-order__send modal-order__send_accent button">Отправить заявку</button>
+        </form>
+    </dialog>
+    <dialog class="modal-order modal-order_calculation" style="display: none;" id="modal-order_calculation">
+        <h3 class="modal-order__title">
+            Заказать рассчет
+        </h3>
+        <form action="" class="modal-order__form" id="measuringForm">
+            <input type="text" id="clientName" class="modal-order__input" placeholder="Ваше имя">
+            <input type="tel" id="clientTel" class="modal-order__input" placeholder="Номер телефона">
+            <input type="email" id="clientEmail" class="modal-order__input" placeholder="E-mail">
+            <input type="checkbox" name="personal-info-agreement" id="personalInfo" class="modal-order__input_checkbox">
+            <label for="personal-info-agreement">
+                Я согласен(на) на обработку
+                <a href="#" class="personal-info-link personal-info-link_accent">персональных данных</a>
+            </label>
+            <button type="submit" class="modal-order__send modal-order__send_violet button">Отправить заявку</button>
+        </form>
+    </dialog>
 </body>
-
+<script src="./js/fancybox.umd.js"></script>
 <script src="./js/main.js"></script>
+<script>
+    Fancybox.bind("[data-fancybox]", {
+            // Your custom options
+        });
+</script>
 </html>
