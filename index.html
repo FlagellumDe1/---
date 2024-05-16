@@ -26,7 +26,7 @@
                 </ul>
             </nav>
             <div class="header__button-wrapper">
-                <button class="button button__order-measuring button_small" data-fancybox data-src="#modal-order_measuring">Заказать размер</button>
+                <button class="button button__order-measuring button_small" data-fancybox data-src="#modal-order_measuring">Заказать замер</button>
                 <button class="button button__order-calculation button_small" data-fancybox data-src="#modal-order_calculation">Заказать рассчет</button>
             </div>
             <button class="burger-button visible-mobile" onclick="mobileNavOverlay.showModal()">
@@ -34,6 +34,57 @@
             </button>
         </div>
     </header>
+    <main class="main">
+        <section class="hero">
+            <div class="hero__inner">
+                <div class="hero__body">
+                    <h2 class="hero__title">
+                        <span class="text-accent">Окна Хаус -</span> <br>Профессиональный подход к остеклению
+                    </h2>
+                    <div class="hero__advantages">
+                        <ul class="hero__advantages-list">
+                            <li class="hero__advantages-item">
+                                <img src="./media/icons/hero__advantages-item-image1.svg" alt="" class="hero__advantages-item-pic">
+                                Современные окна и балконные конструкции по доступным ценам
+                            </li>
+                            <li class="hero__advantages-item">
+                                <img src="./media/icons/hero__advantages-item-image2.svg" alt="" class="hero__advantages-item-pic">
+                                Квалифицированный подход к решению задач любой сложности
+                            </li>
+                            <li class="hero__advantages-item">
+                                <img src="./media/icons/hero__advantages-item-image3.svg" alt="" class="hero__advantages-item-pic">
+                                Гарантия высочайшего качества нашей продукции
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-order modal-order_measuring">
+                    <h3 class="modal-order__title">
+                        Вызвать замерщика на дом
+                    </h3>
+                    <form action="" class="modal-order__form" id="measuringForm">
+                        <input type="text" id="clientName" class="modal-order__input" placeholder="Ваше имя">
+                        <input type="tel" id="clientTel" class="modal-order__input" placeholder="Номер телефона">
+                        <input type="email" id="clientEmail" class="modal-order__input" placeholder="E-mail">
+                        <input type="checkbox" name="personal-info-agreement" id="personalInfo" class="modal-order__input_checkbox">
+                        <label for="personal-info-agreement">
+                            Я согласен(на) на обработку
+                            <a href="#" class="personal-info-link personal-info-link_violet">персональных данных</a>
+                        </label>
+                        <button type="submit" class="modal-order__send modal-order__send_accent button">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+
+    
     <dialog class="mobile-overlay visible-mobile" id="mobileNavOverlay" >
         <button class="mobile-overlay__close" onclick="mobileNavOverlay.close()"></button>
         <nav class="mobile-overlay__nav">
@@ -83,8 +134,6 @@
 <script src="./js/fancybox.umd.js"></script>
 <script src="./js/main.js"></script>
 <script>
-    Fancybox.bind("[data-fancybox]", {
-            // Your custom options
-        });
+    Fancybox.bind("[data-fancybox]", {});
 </script>
 </html>
