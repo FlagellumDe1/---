@@ -60,6 +60,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+.text-accent {
+  color: var(--color-accent);
+}
+
 .burger-button {
   order: 4;
   display: block;
@@ -305,34 +309,40 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.modal-order {
-  min-width: 600px;
-  min-height: 500px;
+.order-form {
+  width: 600px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   font-size: 14px;
+  flex-direction: column;
+  flex-shrink: 0;
+  border-radius: 10px;
 }
 @media (max-width: 768px) {
-  .modal-order {
-    min-width: 380px;
+  .order-form {
+    width: 380px;
   }
 }
 @media (max-width: 480px) {
-  .modal-order {
-    min-width: 0px;
+  .order-form {
     width: 340px;
     padding: 0px !important;
   }
 }
-.modal-order_measuring {
+.order-form_small {
+  width: 406px;
+  height: 428px;
+}
+.order-form_measuring {
   background-color: var(--color-accent);
 }
-.modal-order_calculation {
+.order-form_calculation {
   background-color: var(--color-violet);
 }
-.modal-order__title {
+.order-form__title {
   color: white;
   display: block;
   padding-left: 72px;
@@ -343,33 +353,34 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 30px;
 }
 @media (max-width: 768px) {
-  .modal-order__title {
+  .order-form__title {
     width: 300px;
     padding-left: 0px;
     background: none;
     text-align: center;
   }
 }
-.modal-order__form {
+.order-form__form {
   display: flex;
   flex-wrap: wrap;
   row-gap: 21px;
-  width: 400px;
+  width: 74.5%;
   -moz-column-gap: 13px;
        column-gap: 13px;
   align-items: center;
+  margin: 0 auto;
 }
 @media (max-width: 768px) {
-  .modal-order__form {
+  .order-form__form {
     width: 300px;
   }
 }
 @media (max-width: 480px) {
-  .modal-order__form {
+  .order-form__form {
     width: 200px;
   }
 }
-.modal-order__input {
+.order-form__input {
   background-color: white;
   height: 52px;
   display: block;
@@ -379,61 +390,86 @@ h1, h2, h3, h4, h5, h6 {
   color: black;
   font-size: 16px;
 }
-.modal-order__input_checkbox {
+.order-form__input_checkbox {
   width: 25px;
   aspect-ratio: 1;
 }
-.modal-order__input::-moz-placeholder {
+.order-form__input::-moz-placeholder {
   color: var(--color-violet);
 }
-.modal-order__input::placeholder {
+.order-form__input::placeholder {
   color: var(--color-violet);
 }
-.modal-order label {
+.order-form label {
   display: inline;
 }
-.modal-order__send {
+.order-form__send {
   background-color: white;
   font-weight: 700;
   font-size: 16px;
   padding: 17px 60px;
   margin: 0 auto;
 }
-.modal-order__send_accent {
+.order-form__send_accent {
   color: var(--color-accent);
 }
 @media (hover: hover) {
-  .modal-order__send_accent:hover {
+  .order-form__send_accent:hover {
     color: var(--color-violet);
   }
 }
 @media (hover: none) {
-  .modal-order__send_accent:active {
+  .order-form__send_accent:active {
     color: var(--color-violet);
   }
 }
-.modal-order__send_violet {
+.order-form__send_violet {
   color: var(--color-violet);
 }
 @media (hover: hover) {
-  .modal-order__send_violet:hover {
+  .order-form__send_violet:hover {
     color: var(--color-accent);
   }
 }
 @media (hover: none) {
-  .modal-order__send_violet:active {
+  .order-form__send_violet:active {
     color: var(--color-accent);
   }
 }
 @media (max-width: 768px) {
-  .modal-order__send {
+  .order-form__send {
     padding: 17px 40px;
   }
 }
 @media (max-width: 480px) {
-  .modal-order__send {
+  .order-form__send {
     padding: 17px 20px;
   }
+}
+.order-form_white {
+  color: black;
+  background-color: white;
+}
+.order-form_white input {
+  background-color: #E2E2E2;
+  height: 40px;
+}
+.order-form_white .colored-text {
+  color: #4B67AF;
+}
+.order-form_white button {
+  background-color: var(--color-accent);
+  color: white;
+  padding: 19px 40px;
+}
+.order-form_white .order-form__title {
+  background: none;
+  padding: 0px;
+  color: var(--color-violet);
+  font-size: 18px;
+}
+.order-form_white .order-form__form {
+  row-gap: 15px;
 }
 
 .personal-info-link_violet {
@@ -442,4 +478,49 @@ h1, h2, h3, h4, h5, h6 {
 
 .personal-info-link_accent {
   color: var(--color-accent);
+}
+
+.hero {
+  background-image: linear-gradient(to right, rgba(21, 21, 43, 0.9) 100%, rgba(51, 51, 73, 0.9) 100%), url("../media/images/hero-background.png");
+  background-repeat: no-repeat;
+  color: white;
+  font-size: 14px;
+}
+.hero__inner {
+  padding: 63px 83px;
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 36px;
+  padding-block: 15px;
+}
+.hero__title .text-accent {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+.hero__advantages-list {
+  display: flex;
+  -moz-column-gap: 33px;
+       column-gap: 33px;
+}
+.hero__advantages-item {
+  display: flex;
+  min-height: 140px;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: start;
+}
+.hero__advantages-image {
+  max-height: 80px;
+  max-width: 90px;
+}
+.hero__advantages-description {
+  max-width: 176px;
 }/*# sourceMappingURL=styles.css.map */

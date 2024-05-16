@@ -26,8 +26,8 @@
                 </ul>
             </nav>
             <div class="header__button-wrapper">
-                <button class="button button__order-measuring button_small" data-fancybox data-src="#modal-order_measuring">Заказать замер</button>
-                <button class="button button__order-calculation button_small" data-fancybox data-src="#modal-order_calculation">Заказать рассчет</button>
+                <button class="button button__order-measuring button_small" data-fancybox data-src="#order-form_measuring">Заказать замер</button>
+                <button class="button button__order-calculation button_small" data-fancybox data-src="#order-form_calculation">Заказать рассчет</button>
             </div>
             <button class="burger-button visible-mobile" onclick="mobileNavOverlay.showModal()">
                 <span class="visually-hidden">Открыть мобильное меню</span>
@@ -36,7 +36,7 @@
     </header>
     <main class="main">
         <section class="hero">
-            <div class="hero__inner">
+            <div class="hero__inner container">
                 <div class="hero__body">
                     <h2 class="hero__title">
                         <span class="text-accent">Окна Хаус -</span> <br>Профессиональный подход к остеклению
@@ -44,35 +44,37 @@
                     <div class="hero__advantages">
                         <ul class="hero__advantages-list">
                             <li class="hero__advantages-item">
-                                <img src="./media/icons/hero__advantages-item-image1.svg" alt="" class="hero__advantages-item-pic">
-                                Современные окна и балконные конструкции по доступным ценам
+                                <img src="./media/icons/hero__advantages-item-image1.svg" alt="" class="hero__advantages-image">
+                                <p class="hero__advantages-description"> Современные окна и балконные конструкции по доступным ценам</p>
                             </li>
                             <li class="hero__advantages-item">
-                                <img src="./media/icons/hero__advantages-item-image2.svg" alt="" class="hero__advantages-item-pic">
-                                Квалифицированный подход к решению задач любой сложности
+                                <img src="./media/icons/hero__advantages-item-image2.svg" alt="" class="hero__advantages-image">
+                                <p class="hero__advantages-description">Квалифицированный подход к решению задач любой сложности</p>
                             </li>
                             <li class="hero__advantages-item">
-                                <img src="./media/icons/hero__advantages-item-image3.svg" alt="" class="hero__advantages-item-pic">
-                                Гарантия высочайшего качества нашей продукции
+                                <img src="./media/icons/hero__advantages-item-image3.svg" alt="" class="hero__advantages-image">
+                                <p class="hero__advantages-description">Гарантия высочайшего качества нашей продукции</p>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="modal-order modal-order_measuring">
-                    <h3 class="modal-order__title">
+                <div class="order-form order-form_small order-form_white">
+                    <h3 class="order-form__title">
                         Вызвать замерщика на дом
                     </h3>
-                    <form action="" class="modal-order__form" id="measuringForm">
-                        <input type="text" id="clientName" class="modal-order__input" placeholder="Ваше имя">
-                        <input type="tel" id="clientTel" class="modal-order__input" placeholder="Номер телефона">
-                        <input type="email" id="clientEmail" class="modal-order__input" placeholder="E-mail">
-                        <input type="checkbox" name="personal-info-agreement" id="personalInfo" class="modal-order__input_checkbox">
-                        <label for="personal-info-agreement">
-                            Я согласен(на) на обработку
-                            <a href="#" class="personal-info-link personal-info-link_violet">персональных данных</a>
-                        </label>
-                        <button type="submit" class="modal-order__send modal-order__send_accent button">Отправить заявку</button>
-                    </form>
+                    <div class="hero__form-wrapper">
+                        <form action="" class="order-form__form" id="measuringForm">
+                            <input type="text" id="clientName" class="order-form__input" placeholder="Ваше имя">
+                            <input type="tel" id="clientTel" class="order-form__input" placeholder="Номер телефона">
+                            <input type="email" id="clientEmail" class="order-form__input" placeholder="E-mail">
+                            <input type="checkbox" name="personal-info-agreement" id="personalInfo" class="order-form__input_checkbox">
+                            <label for="personal-info-agreement">
+                                Я согласен(на) на обработку
+                                <a href="#" class="personal-info-link personal-info-link_violet">персональных данных</a>
+                            </label>
+                            <button type="submit" class="order-form__send order-form__send_accent button">Отправить заявку</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -98,36 +100,36 @@
             </ul>
         </nav>
     </dialog>
-    <dialog class="modal-order modal-order_measuring" style="display: none;" id="modal-order_measuring">
-        <h3 class="modal-order__title">
+    <dialog class="order-form order-form_measuring" style="display: none;" id="order-form_measuring">
+        <h3 class="order-form__title">
             Вызвать замерщика на дом
         </h3>
-        <form action="" class="modal-order__form" id="measuringForm">
-            <input type="text" id="clientName" class="modal-order__input" placeholder="Ваше имя">
-            <input type="tel" id="clientTel" class="modal-order__input" placeholder="Номер телефона">
-            <input type="email" id="clientEmail" class="modal-order__input" placeholder="E-mail">
-            <input type="checkbox" name="personal-info-agreement" id="personalInfo" class="modal-order__input_checkbox">
+        <form action="" class="order-form__form" id="measuringFormModal">
+            <input type="text" id="clientName" class="order-form__input" placeholder="Ваше имя">
+            <input type="tel" id="clientTel" class="order-form__input" placeholder="Номер телефона">
+            <input type="email" id="clientEmail" class="order-form__input" placeholder="E-mail">
+            <input type="checkbox" name="personal-info-agreement" id="personalInfo" class="order-form__input_checkbox">
             <label for="personal-info-agreement">
                 Я согласен(на) на обработку 
                 <a href="#" class="personal-info-link personal-info-link_violet">персональных данных</a>
             </label>
-            <button type="submit" class="modal-order__send modal-order__send_accent button">Отправить заявку</button>
+            <button type="submit" class="order-form__send order-form__send_accent button">Отправить заявку</button>
         </form>
     </dialog>
-    <dialog class="modal-order modal-order_calculation" style="display: none;" id="modal-order_calculation">
-        <h3 class="modal-order__title">
+    <dialog class="order-form order-form_calculation" style="display: none;" id="order-form_calculation">
+        <h3 class="order-form__title">
             Заказать рассчет
         </h3>
-        <form action="" class="modal-order__form" id="measuringForm">
-            <input type="text" id="clientName" class="modal-order__input" placeholder="Ваше имя">
-            <input type="tel" id="clientTel" class="modal-order__input" placeholder="Номер телефона">
-            <input type="email" id="clientEmail" class="modal-order__input" placeholder="E-mail">
-            <input type="checkbox" name="personal-info-agreement" id="personalInfo" class="modal-order__input_checkbox">
+        <form action="" class="order-form__form" id="measuringForm">
+            <input type="text" id="clientName" class="order-form__input" placeholder="Ваше имя">
+            <input type="tel" id="clientTel" class="order-form__input" placeholder="Номер телефона">
+            <input type="email" id="clientEmail" class="order-form__input" placeholder="E-mail">
+            <input type="checkbox" name="personal-info-agreement" id="personalInfo" class="order-form__input_checkbox">
             <label for="personal-info-agreement">
                 Я согласен(на) на обработку
                 <a href="#" class="personal-info-link personal-info-link_accent">персональных данных</a>
             </label>
-            <button type="submit" class="modal-order__send modal-order__send_violet button">Отправить заявку</button>
+            <button type="submit" class="order-form__send order-form__send_violet button">Отправить заявку</button>
         </form>
     </dialog>
 </body>

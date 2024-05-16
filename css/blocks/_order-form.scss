@@ -1,21 +1,28 @@
-.modal-order{
-    min-width: 600px;
-    min-height: 500px;
+.order-form{
+    width: 600px;
+    height: 500px;
 
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 14px;
+    flex-direction: column;
+    flex-shrink: 0;
+    border-radius: 10px;
     
     @include mobile{
-        min-width: 380px;
+        width: 380px;
     }
 
     @include mobile-S{
-        min-width: 0px;
         width: 340px;
         padding: 0px !important;
+    }
+
+    &_small{
+        width: 406px;
+        height: 428px;
     }
 
     &_measuring{
@@ -48,9 +55,10 @@
         display: flex;
         flex-wrap: wrap;
         row-gap: 21px;
-        width: 400px;
+        width: 74.5%;
         column-gap: 13px;
         align-items: center;
+        margin: 0 auto;
 
         @include mobile{
             width: 300px;
@@ -100,7 +108,7 @@
                 color: var(--color-violet);
             }
         }
-        
+
         &_violet{
             color: var(--color-violet);
             
@@ -118,6 +126,32 @@
         }
     }
     
+    &_white{
+        color: black;
+        background-color: white;
+        input{
+            background-color: #E2E2E2;
+            height: 40px;
+        }
+        .colored-text{
+            color: #4B67AF;
+        }
+        button{
+            background-color: var(--color-accent);
+            color: white;
+            padding: 19px 40px;
+        }
+
+        .order-form__title{
+            background: none;
+            padding: 0px;
+            color: var(--color-violet);
+            font-size: 18px;
+        }
+        .order-form__form{
+            row-gap: 15px;
+        }
+    }
 }
 
 .personal-info-link_violet{

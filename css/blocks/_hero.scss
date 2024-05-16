@@ -1,0 +1,54 @@
+.hero{
+    background-image: linear-gradient(to right, rgba(21, 21, 43, 0.9) 100%, rgba(51, 51, 73, 0.90) 100%), url('../media/images/hero-background.png');
+    background-repeat: no-repeat;
+
+    color: white;
+    font-size: 14px;
+
+    &__inner{
+        padding: 63px 83px;
+        display: flex;
+        column-gap: 30px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 100;
+        font-size: 36px;
+        padding-block: 15px;
+
+        .text-accent{
+            font-size: 24px;
+            font-weight: 700;
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+
+    &__advantages{
+
+        &-list{
+        display: flex;
+        column-gap: 33px;
+        }
+
+        &-item{
+            display: flex;
+            min-height: 140px;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: start;
+        }
+        &-image{
+            max-height: 80px;
+            max-width: 90px;
+        }
+
+        &-description{
+            max-width: 176px;
+        }
+    }
+
+
+}
