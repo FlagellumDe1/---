@@ -64,6 +64,10 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-accent);
 }
 
+label {
+  cursor: default;
+}
+
 .burger-button {
   order: 4;
   display: block;
@@ -335,6 +339,7 @@ h1, h2, h3, h4, h5, h6 {
 .order-form_small {
   width: 406px;
   height: 428px;
+  position: relative;
 }
 .order-form_measuring {
   background-color: var(--color-accent);
@@ -445,6 +450,24 @@ h1, h2, h3, h4, h5, h6 {
   .order-form__send {
     padding: 17px 20px;
   }
+}
+.order-form__decoration {
+  position: absolute;
+  width: 149%;
+  max-width: none;
+  bottom: -56px;
+  left: -86px;
+}
+@media (max-width: 1024px) {
+  .order-form__decoration {
+    display: none;
+  }
+}
+.order-form__checkbox-wrapper {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
 }
 .order-form_white {
   color: black;

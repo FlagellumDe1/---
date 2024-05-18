@@ -23,6 +23,7 @@
     &_small{
         width: 406px;
         height: 428px;
+        position: relative;
     }
 
     &_measuring{
@@ -125,7 +126,26 @@
             padding: 17px 20px;
         }
     }
+
+    &__decoration{
+        position: absolute;
+        width: 149%;
+        max-width: none;
+        bottom: -56px;
+        left: -86px;
+
+        @include tablet {
+            display: none;
+        }
+    }
     
+         &__checkbox-wrapper {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 10px;
+         }
+
+
     &_white{
         color: black;
         background-color: white;
