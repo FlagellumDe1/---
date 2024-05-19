@@ -5,6 +5,7 @@
     aspect-ratio: 1;
     background-color: inherit;
     position: relative;
+    flex-shrink: 0;
 
     @include hover{
         background-color: var(--color-accent);
