@@ -81,6 +81,72 @@
                 </div>
             </div>
         </section>
+        <section class="services container">
+            <h2 class="services__title section-title">
+                Наши услуги
+            </h2>
+            <ul class="services__list">
+                <li class="services__card" style="background: linear-gradient(to right, white 48%, transparent 100%), url('./media/images/services__card-background1.png')" data-fancybox data-src="#servicesModal1">
+                    <div class="services__card-title">
+                        <img src="./media/icons/services__card-icon.svg" alt="" class="services__card-icon">
+                        <h3 class="services__card-name">Установка пластиковых окон</h3>
+                    </div>
+                    <p class="services__card-description">
+                        Устанавливаем пластиковые окна Rehau от проверенного производителя с гарантией качества
+                    </p>
+                    <svg width="40" height="21" viewBox="0 0 40 21" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="services__card-arrow">
+                        <path d="M23.3846 1.75L38 10.75L23.3846 19.75" stroke="white" stroke-width="2" />
+                        <path d="M0 10.75H37.0256" stroke="white" stroke-width="2" />
+                    </svg>
+                </li>
+                <li class="services__card" style="background: linear-gradient(to right, white 48%, transparent 100%), url('./media/images/services__card-background3.png')">
+                    <div class="services__card-title">
+                        <img src="./media/icons/services__card-icon2.svg" alt="" class="services__card-icon">
+                        <h3 class="services__card-name">
+                            Остекление балконов и лоджий
+                        </h3>
+                    </div>
+                    <p class="services__card-description">
+                        Занимаемся остеклением и отделкой балконов и лоджий. Теплое и холодное остекление, изготовление выносов и крыш. Беремся
+                        за сложные объекты
+                    </p>
+                    <svg width="40" height="21" viewBox="0 0 40 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="services__card-arrow">
+                        <path d="M23.3846 1.75L38 10.75L23.3846 19.75" stroke="white" stroke-width="2" />
+                        <path d="M0 10.75H37.0256" stroke="white" stroke-width="2" />
+                    </svg>
+
+                </li>
+                <li class="services__card" style="background: linear-gradient(to right, white 48%, transparent 100%), url('./media/images/services__card-background2.png')">
+                    <div class="services__card-title">
+                        <img src="./media/icons/services__card-icon3.svg" alt="" class="services__card-icon">
+                        <h3 class="services__card-name">Остекление коттеджей и дач</h3>
+                    </div>
+                    <p class="services__card-description">
+                        Остекление и отделка под ключ: от коттеджей и дач до террас и беседок. Выделяем личного технолога под каждый объект
+                    </p>
+                    <svg width="40" height="21" viewBox="0 0 40 21" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="services__card-arrow">
+                        <path d="M23.3846 1.75L38 10.75L23.3846 19.75" stroke="white" stroke-width="2" />
+                        <path d="M0 10.75H37.0256" stroke="white" stroke-width="2" />
+                    </svg>
+                </li>
+                <li class="services__card" style="background: linear-gradient(to right, white 48%, transparent 100%), url('./media/images/services__card-background4.png')">
+                    <div class="services__card-title">
+                        <img src="./media/icons/services__card-icon4.svg" alt="" class="services__card-icon">
+                        <h3 class="services__card-name">Остекление корпоративных объектов</h3>
+                    </div>
+                    <p class="services__card-description">
+                        Реализуем сложные проекты по остеклению торговых центров, ресторанов, производственных помещений и офисов
+                    </p>
+                    <svg width="40" height="21" viewBox="0 0 40 21" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="services__card-arrow">
+                        <path d="M23.3846 1.75L38 10.75L23.3846 19.75" stroke="white" stroke-width="2" />
+                        <path d="M0 10.75H37.0256" stroke="white" stroke-width="2" />
+                    </svg>
+                </li>
+            </ul>
+        </section>
     </main>
 
 
@@ -89,7 +155,7 @@
 
 
 
-    
+    <!--Mobile menu-->
     <dialog class="mobile-overlay visible-mobile" id="mobileNavOverlay" >
         <button class="mobile-overlay__close" onclick="mobileNavOverlay.close()"></button>
         <nav class="mobile-overlay__nav">
@@ -103,6 +169,8 @@
             </ul>
         </nav>
     </dialog>
+
+    <!--Order buttons popup-->
     <dialog class="order-form order-form_measuring" style="display: none;" id="order-form_measuring">
         <h3 class="order-form__title">
             Вызвать замерщика на дом
@@ -139,6 +207,10 @@
             <button type="submit" class="order-form__send order-form__send_violet button">Отправить заявку</button>
         </form>
     </dialog>
+
+    <!--Services cards popup -->
+
+    <dialog class="services__modal" id="servicesModal1"></dialog>
 </body>
 <script src="./js/fancybox.umd.js"></script>
 <script src="./js/main.js"></script>

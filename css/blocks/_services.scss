@@ -1,0 +1,89 @@
+.services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-violet-alternate);
+
+
+    &__list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 11px;
+        width: 100%;
+
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            max-width: 595px;
+        }
+    }
+
+    &__card{
+        min-height: 270px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding-left: 50px;
+        row-gap: 30px;
+        position: relative;
+        cursor: pointer;
+        border-radius: 5px;
+        transition-duration: 0.3s;
+
+        @media (max-width: 940px) and (min-width: 769px) {
+                background: white !important;
+            }
+
+        @include mobile-S{
+            background: white !important;
+            padding-left: 0px;
+            align-items: center;
+            padding: 15px 10px 40px 10px;
+        }
+
+        &-title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 20px;
+            max-width: 350px;
+        }
+
+        &-description{
+            width: 300px;
+        }
+
+        &-arrow{
+            position: absolute;
+            right: 25px;
+            bottom: 25px;
+            path{
+                transition-duration: 0.3s;
+
+                @media (max-width: 940px) and (min-width: 769px) {
+                        stroke: var(--color-violet-alternate);
+                    }
+                
+                    @include mobile-S {
+                        stroke: var(--color-violet-alternate);
+                    }
+            }
+        }
+
+        @include hover{
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            
+            .services__card-arrow{
+                path {
+                    stroke: var(--color-accent);
+                }
+            }
+        }
+    }
+    &__modal{
+        background-color: white;
+        height: 650px;
+        width: 1000px;
+    }
+}

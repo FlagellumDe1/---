@@ -17,6 +17,7 @@ body{
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-size: 16px;
+    background-color: #E5E5E5;
 }
 
 .container{
@@ -36,6 +37,7 @@ a{
 h1, h2, h3, h4, h5, h6{
     font-size: 24px;
     font-weight: 700;
+    color: var(--color-violet-alternate);
 }
 
 .text-accent{
@@ -45,3 +47,10 @@ label{
     cursor: default;
 }
 
+section{
+    margin-bottom: 100px;
+}
+
+.section-title{
+    margin-bottom: 45px;
+}
