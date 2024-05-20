@@ -24,6 +24,7 @@ body{
     max-width: calc(var(--container-width) + 30px);
     margin: 0 auto;
     padding-inline: 15px;
+    overflow-x: hidden;
 }
 
 a{
@@ -48,7 +49,7 @@ label{
 }
 
 section{
-    margin-bottom: 100px;
+    margin-bottom: 100px !important;
 }
 
 .section-title{
