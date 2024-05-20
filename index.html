@@ -26,7 +26,7 @@
                 </ul>
             </nav>
             <div class="header__button-wrapper">
-                <button class="button button__order-measuring button_small" data-fancybox data-src="#order-form_measuring">Заказать замер</button>
+                <button class="button button__order-measuring button_small" data-fancybox data-src="#order-form_measuring">Заявка на замер</button>
                 <button class="button button__order-calculation button_small" data-fancybox data-src="#order-form_calculation">Заказать рассчет</button>
             </div>
             <button class="burger-button visible-mobile" onclick="mobileNavOverlay.showModal()">
@@ -86,7 +86,7 @@
                 Наши услуги
             </h2>
             <ul class="services__list">
-                <li class="services__card" style="background: linear-gradient(to right, white 48%, transparent 100%), url('./media/images/services__card-background1.png')" data-fancybox data-src="#servicesModal1">
+                <li class="services__card" style="background: linear-gradient(to right, white 48%, transparent 100%), url('./media/images/services__card-background1.png')" data-fancybox data-src="#serviceModal1">
                     <div class="services__card-title">
                         <img src="./media/icons/services__card-icon.svg" alt="" class="services__card-icon">
                         <h3 class="services__card-name">Установка пластиковых окон</h3>
@@ -100,7 +100,7 @@
                         <path d="M0 10.75H37.0256" stroke="white" stroke-width="2" />
                     </svg>
                 </li>
-                <li class="services__card" style="background: linear-gradient(to right, white 48%, transparent 100%), url('./media/images/services__card-background3.png')">
+                <li class="services__card" style="background: linear-gradient(to right, white 48%, transparent 100%), url('./media/images/services__card-background3.png')" data-fancybox data-src="#serviceModal2">
                     <div class="services__card-title">
                         <img src="./media/icons/services__card-icon2.svg" alt="" class="services__card-icon">
                         <h3 class="services__card-name">
@@ -117,7 +117,7 @@
                     </svg>
 
                 </li>
-                <li class="services__card" style="background: linear-gradient(to right, white 48%, transparent 100%), url('./media/images/services__card-background2.png')">
+                <li class="services__card" style="background: linear-gradient(to right, white 48%, transparent 100%), url('./media/images/services__card-background2.png')" data-fancybox data-src="#serviceModal3">
                     <div class="services__card-title">
                         <img src="./media/icons/services__card-icon3.svg" alt="" class="services__card-icon">
                         <h3 class="services__card-name">Остекление коттеджей и дач</h3>
@@ -131,7 +131,7 @@
                         <path d="M0 10.75H37.0256" stroke="white" stroke-width="2" />
                     </svg>
                 </li>
-                <li class="services__card" style="background: linear-gradient(to right, white 48%, transparent 100%), url('./media/images/services__card-background4.png')">
+                <li class="services__card" style="background: linear-gradient(to right, white 48%, transparent 100%), url('./media/images/services__card-background4.png')" data-fancybox data-src="#serviceModal4">
                     <div class="services__card-title">
                         <img src="./media/icons/services__card-icon4.svg" alt="" class="services__card-icon">
                         <h3 class="services__card-name">Остекление корпоративных объектов</h3>
@@ -210,7 +210,371 @@
 
     <!--Services cards popup -->
 
-    <dialog class="services__modal" id="servicesModal1"></dialog>
+    <dialog class="service-modal" id="serviceModal1" style="background: linear-gradient(to bottom right, white 77%, transparent), url('./media/images/service-modal-background1.png');">
+        <div class="service-modal__head">
+            <img src="./media/images/service-modal-image1.png" alt="Фото пластикового окна" class="service-modal__image">
+            <div class="service-modal__head-inner">
+                <h3 class="service-modal__title">
+                    Установка пластиковых окон
+                </h3>
+                <p class="service-modal__description">
+                    Пластиковые окна Rehau от проверенного производителя с гарантией качества
+                </p>
+                <div class="service-modal__button-wrapper">
+                    <button class="button button__order-measuring button_small" data-fancybox data-src="#order-form_measuring">Заявка на
+                        замер</button>
+                    <button class="button button__order-calculation button_small" data-fancybox
+                        data-src="#order-form_calculation">Заказать рассчет</button>
+                </div>
+            </div>
+        </div>
+        <ul class="service-modal__features-list hidden-mobile">
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon1.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Пластиковые окна 
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Использование ламинационных окон, ламинации в массе, 3д-ламинации, а также покраска окон.
+                    </p>
+                </div>
+            </li>
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon2.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Ламинация 
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Пластиковые окна могут быть любого нужного вам цвета. Внутри и снаружи.
+                    </p>
+                </div>
+            </li>
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon3.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Подоконники
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Качественный подоконник не царапается, выдерживает большие нагрузки и будет служить вам долгие годы.
+                    </p>
+                </div>
+            </li>
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon4.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Цветные ручки
+                    </h4>
+                    <p class="service-modal__features-description">
+                         Оригинальные оконные ручки подчеркнут дизайн окна. Подберем оптимальный цвет ручек в зависимости от цвета
+                        всей конструкции.
+                    </p>
+                </div>
+            </li>
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon5.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Проветриватели
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Постоянное обновление воздуха в комнате снижает риск аллергии, улучшает сон и благоприятно влияет на
+                        самочувствие.
+                    </p>
+                </div>
+            </li>
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon6.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Москитные сетки 
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Нежеланные насекомые останутся на улице, а ваша кошка - в квартире. Устанавливаем сетки для пластиковых
+                        окон любых форм и размеров.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </dialog>
+    <dialog class="service-modal" id="serviceModal2"
+        style="background: linear-gradient(to bottom right, white 77%, transparent), url('./media/images/service-modal-background2.png');">
+        <div class="service-modal__head">
+            <img src="./media/images/service-modal-image2.png" alt="Фото пластикового окна" class="service-modal__image">
+            <div class="service-modal__head-inner">
+                <h3 class="service-modal__title">
+                    Остекление балконов и лоджий 
+                </h3>
+                <p class="service-modal__description">
+                    Занимаемся остеклением и отделкой балконов и лоджий. Теплое и холодное остекление,
+                    изготовление выносов и крыш. Беремся за сложные объекты
+                </p>
+                <div class="service-modal__button-wrapper">
+                    <button class="button button__order-measuring button_small" data-fancybox
+                        data-src="#order-form_measuring">Заявка на
+                        замер</button>
+                    <button class="button button__order-calculation button_small" data-fancybox
+                        data-src="#order-form_calculation">Заказать рассчет</button>
+                </div>
+            </div>
+        </div>
+        <ul class="service-modal__features-list hidden-mobile">
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon1.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Тёплое остекление 
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Теплое остекление — возможность сделать из балкона или лоджии полноценное жилое помещение.
+                    </p>
+                </div>
+            </li>
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon2.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Холодное остекление 
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Холодное остекление рекомендовано в случаях, когда балкон или лоджия используются для хранения
+                        вещей.
+                    </p>
+                </div>
+            </li>
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon3.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Панорамное остекление 
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Остекление от пола до потолка, дающее максимальное естественное освещение и прекрасный обзор
+                        окрестностей.
+                    </p>
+                </div>
+            </li>
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon4.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Остекление с выносом 
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Способ увеличения площади и объема балкона или лоджии.
+                    </p>
+                </div>
+            </li>
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon5.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Остекление с крышей 
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Строительство крыши для домов с высоким потолком и квартир, расположенных на последних этажах.
+                    </p>
+                </div>
+            </li>
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon6.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Объединение с комнатой 
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Перепланировка квартиры, дающая дополнительные метры полезной площади и улучшающая жилищные
+                        условия.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </dialog>
+    <dialog class="service-modal" id="serviceModal3"
+        style="background: linear-gradient(to bottom right, white 77%, transparent), url('./media/images/service-modal-background3.png');">
+        <div class="service-modal__head">
+            <img src="./media/images/service-modal-image3.png" alt="Фото пластикового окна" class="service-modal__image">
+            <div class="service-modal__head-inner">
+                <h3 class="service-modal__title">
+                    Остекление коттеджей и дач 
+                </h3>
+                <p class="service-modal__description">
+                    Остекление и отделка под ключ: от коттеджей и дач до террас и беседок. Выделяем личного
+                    технолога под каждый объект.
+                </p>
+                <div class="service-modal__button-wrapper">
+                    <button class="button button__order-measuring button_small" data-fancybox
+                        data-src="#order-form_measuring">Заявка на
+                        замер</button>
+                    <button class="button button__order-calculation button_small" data-fancybox
+                        data-src="#order-form_calculation">Заказать рассчет</button>
+                </div>
+            </div>
+        </div>
+        <ul class="service-modal__features-list hidden-mobile">
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon1.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Цветные окна 
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Использование ламинационных окон, ламинации в массе, 3д-ламинации, а также покраска окон.
+                    </p>
+                </div>
+            </li>
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon2.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Фигурные окна 
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Арочные окна, окна трапеции, треугольные окна, круглые и многоугольные окна
+                    </p>
+                </div>
+            </li>
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon3.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Алюминиевые конструкции 
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Идеальный вариант для большой площади остекления: зимние сады, террасы и т.п..
+                    </p>
+                </div>
+            </li>
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon4.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Деревянные окна 
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Экологичное и натуральное решение для остекления любого объекта.
+                    </p>
+                </div>
+            </li>
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon5.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Портальные решения 
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Эксклюзивные дверные и балконные раздвижные конструкции для элитных квартир и респектабельных домов,
+                        обеспечивающие панорамный вид и экономящие пространство.
+                    </p>
+                </div>
+            </li>
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon6.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Рольставни и ворота
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Защитные рольставни для частных домов, роллетные ворота
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </dialog>
+    <dialog class="service-modal" id="serviceModal4"
+        style="background: linear-gradient(to bottom right, white 77%, transparent), url('./media/images/service-modal-background4.png');">
+        <div class="service-modal__head">
+            <img src="./media/images/service-modal-image4.png" alt="Фото пластикового окна" class="service-modal__image">
+            <div class="service-modal__head-inner">
+                <h3 class="service-modal__title">
+                    Остекление корпоративных объектов 
+                </h3>
+                <p class="service-modal__description">
+                    Реализуем сложные проекты по остеклению торговых центров, ресторанов, производственных
+                    помещений и офисов
+                </p>
+                <div class="service-modal__button-wrapper">
+                    <button class="button button__order-measuring button_small" data-fancybox
+                        data-src="#order-form_measuring">Заявка на
+                        замер</button>
+                    <button class="button button__order-calculation button_small" data-fancybox
+                        data-src="#order-form_calculation">Заказать рассчет</button>
+                </div>
+            </div>
+        </div>
+        <ul class="service-modal__features-list hidden-mobile">
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon1.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Многоквартирные дома
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Изготовление и монтаж окон ПВХ под ключ. Приглашаем к партнерству застройщиков
+                    </p>
+                </div>
+            </li>
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon2.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Офисные помещения
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Установка пластиковых окон, офисных перегородок и дверей и входных групп.
+                    </p>
+                </div>
+            </li>
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon3.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Социальные объекты 
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Остекляем детские сады, школы, медицинские учреждения
+                    </p>
+                </div>
+            </li>
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon4.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Объекты торговли 
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Способ увеличения площади и объема балкона или лоджии.
+                    </p>
+                </div>
+            </li>
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon5.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Спортивные объекты 
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Остекляем спортивные залы, бассейны, крытые спорткомплексы
+                    </p>
+                </div>
+            </li>
+            <li class="service-modal__features-item">
+                <img src="./media/icons/service-modal-features-icon6.svg" alt="" class="service-modal__features-icon">
+                <div class="service-modal__features-body">
+                    <h4 class="service-modal__features-title">
+                        Производственные помещения
+                    </h4>
+                    <p class="service-modal__features-description">
+                        Устанавливаем окна для складских и промышленных зданий в соответствии с требованиями бизнеса
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </dialog>
+    
 </body>
 <script src="./js/fancybox.umd.js"></script>
 <script src="./js/main.js"></script>

@@ -1,0 +1,117 @@
+.service-modal{
+    
+    background-repeat: no-repeat !important;
+    background-position: 100% 100% !important;
+
+   
+    row-gap: 35px;
+    padding: 50px 109px;
+
+    @include tablet{
+        padding: 40px 40px;
+    }
+
+    &__head{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        column-gap: 90px;
+
+       
+        &-inner{
+            display: flex;
+            flex-direction: column;
+            row-gap: 25px;
+
+            @include mobile {
+                    display: contents;
+                }
+        }
+
+         @media (max-width: 900px){
+            gap: 30px;
+        }
+
+        @include mobile{
+            flex-direction: column;
+        }
+
+    }
+    
+    &__title{
+        order: 0;
+
+        @include mobile-S{
+            text-align: center;
+        }
+    }
+
+    &__description{
+        max-width: 260px;
+        order: 2;
+    }
+
+    &__image{
+        @include mobile {
+                order: 1;
+            }
+        
+    }
+
+    &__button-wrapper{
+        display: flex;
+        gap: 15px;
+        order: 3;
+
+        @media (max-width: 900px) {
+                flex-direction: column;
+            }
+
+        @include mobile-S{
+            flex-direction: row;
+        }
+    }
+
+
+    &__features{
+
+        &-list{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            width: 95%;
+        }
+
+        &-item{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            column-gap: 10px;
+        }
+
+        &-body{
+            max-width: 275px;
+            font-size: 13px;
+        }
+
+        &-title{
+            font-size: 14px;
+            margin-bottom: 0.5em;
+        }
+    }
+    
+    .f-button {
+
+        svg{
+            stroke: var(--color-violet);
+        }
+
+        @include hover{
+            svg{
+                stroke: var(--color-accent);
+            }
+        }
+    }
+
+}

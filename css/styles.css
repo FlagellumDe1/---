@@ -40,7 +40,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-size: 16px;
-  background-color: #E5E5E5;
+  background-color: #F2F2F2;
 }
 
 .container {
@@ -690,4 +690,110 @@ section {
   background-color: white;
   height: 650px;
   width: 1000px;
+}
+
+.service-modal {
+  background-repeat: no-repeat !important;
+  background-position: 100% 100% !important;
+  row-gap: 35px;
+  padding: 50px 109px;
+}
+@media (max-width: 1024px) {
+  .service-modal {
+    padding: 40px 40px;
+  }
+}
+.service-modal__head {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  -moz-column-gap: 90px;
+       column-gap: 90px;
+}
+.service-modal__head-inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+@media (max-width: 768px) {
+  .service-modal__head-inner {
+    display: contents;
+  }
+}
+@media (max-width: 900px) {
+  .service-modal__head {
+    gap: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .service-modal__head {
+    flex-direction: column;
+  }
+}
+.service-modal__title {
+  order: 0;
+}
+@media (max-width: 480px) {
+  .service-modal__title {
+    text-align: center;
+  }
+}
+.service-modal__description {
+  max-width: 260px;
+  order: 2;
+}
+@media (max-width: 768px) {
+  .service-modal__image {
+    order: 1;
+  }
+}
+.service-modal__button-wrapper {
+  display: flex;
+  gap: 15px;
+  order: 3;
+}
+@media (max-width: 900px) {
+  .service-modal__button-wrapper {
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  .service-modal__button-wrapper {
+    flex-direction: row;
+  }
+}
+.service-modal__features-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  width: 95%;
+}
+.service-modal__features-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.service-modal__features-body {
+  max-width: 275px;
+  font-size: 13px;
+}
+.service-modal__features-title {
+  font-size: 14px;
+  margin-bottom: 0.5em;
+}
+.service-modal .f-button svg {
+  stroke: var(--color-violet);
+}
+@media (hover: hover) {
+  .service-modal .f-button:hover svg {
+    stroke: var(--color-accent);
+  }
+}
+@media (hover: none) {
+  .service-modal .f-button:active svg {
+    stroke: var(--color-accent);
+  }
 }/*# sourceMappingURL=styles.css.map */
