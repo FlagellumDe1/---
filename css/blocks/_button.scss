@@ -2,10 +2,12 @@
     border-radius: 3px;
     color: white;
     background-repeat: no-repeat;
-    background-position: 14px 12px;
+    background-position: 34px 17px;
     transition-duration: var(--transition-time);
     cursor: pointer;
     white-space: nowrap;
+
+    padding: 17px 54px 18px 76px;
 
     &__order-measuring{
         background-color: var(--color-accent);
@@ -28,6 +30,7 @@
 
     &_small{
         padding: 12px 23px 13px 47px;
+        background-position: 14px 12px;
 
         @include mobile-S{
             font-size: 13px;

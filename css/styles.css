@@ -216,10 +216,11 @@ section {
   border-radius: 3px;
   color: white;
   background-repeat: no-repeat;
-  background-position: 14px 12px;
+  background-position: 34px 17px;
   transition-duration: var(--transition-time);
   cursor: pointer;
   white-space: nowrap;
+  padding: 17px 54px 18px 76px;
 }
 .button__order-measuring {
   background-color: var(--color-accent);
@@ -251,6 +252,7 @@ section {
 }
 .button_small {
   padding: 12px 23px 13px 47px;
+  background-position: 14px 12px;
 }
 @media (max-width: 480px) {
   .button_small {
@@ -804,6 +806,9 @@ section {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .products__categories {
   margin-bottom: 30px;
@@ -844,8 +849,12 @@ section {
     color: white;
   }
 }
+.products__catalog {
+  margin-bottom: 50px;
+}
 .products__swiper {
   width: 100%;
+  margin-bottom: 55px;
 }
 .products__swiper-wrapper {
   max-width: 1200px;
@@ -907,11 +916,11 @@ section {
   color: var(--color-accent);
   font-size: clamp(24px, 1.875vw, 36px);
   order: 0;
-  white-space: nowrap;
 }
 @media (max-width: 768px) {
   .products__card h3 {
     font-size: 36px;
+    text-align: center;
   }
 }
 .products__card p {
@@ -945,6 +954,45 @@ section {
 }
 .products .inactive {
   display: none;
+}
+.products__banner {
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(21, 21, 43, 0.9) 100%, rgba(21, 21, 43, 0.9) 100%), url("../media/images/products-banner-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  border-radius: 3px;
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  padding: 30px 30px;
+  margin-bottom: 55px;
+}
+.products__banner-body {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+@media (max-width: 1024px) {
+  .products__banner-body {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 30px;
+  }
+}
+.products__banner-item {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 190px;
+  text-align: center;
+}
+.products__banner-icon {
+  height: 90px;
 }
 
 .swiper-button-next::after {
