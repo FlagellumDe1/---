@@ -1,0 +1,158 @@
+.contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    margin-bottom: 0px !important;
+    
+    &__inner{
+        display: flex;
+        column-gap: 90px;
+
+        @include tablet{
+            column-gap: 40px;
+        }
+
+        @include mobile{
+            flex-direction: column;
+            align-items: center;
+            padding-inline: 15px;
+        }
+
+    }
+
+    &__body{
+        position: relative;
+        
+        @include mobile{
+            margin-bottom: 30px;
+        }
+    }
+
+    &__tel{
+        margin-bottom: 50px;
+        &-title{
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        &-wrapper{
+            padding-left: 46px;
+            display: flex;
+            column-gap: 50px;
+            position: relative;
+
+            @media (max-width:1130px){
+                flex-direction: column;
+                row-gap: 20px;
+            }
+
+            &::before{
+                content: url('../media/icons/contacts-icon-tel.svg');
+                position: absolute;
+                left: 0px;
+
+            }
+        }
+
+        a{
+            font-weight: 700;
+            font-size: 22px;
+            transition: 0.3s;
+
+            @include hover{
+                color: var(--color-accent);
+            }
+        }
+    }
+
+    &__location{
+        padding-left: 46px;
+        gap: 50px;
+        position: relative;
+        margin-bottom: 15px;
+        &::before {
+                content: url('../media/icons/contacts-icon-place.svg');
+                position: absolute;
+                left: 0px;
+        
+            }
+
+        a{
+            font-size: 18px;
+            @include hover {
+                    color: var(--color-accent);
+                }
+        }
+    }
+
+    &__mail{
+        padding-left: 46px;
+            gap: 50px;
+            position: relative;
+            margin-bottom: 60px;
+        
+            &::before {
+                content: url('../media/icons/contacts-icon-mail.svg');
+                position: absolute;
+                left: 0px;
+        
+            }
+        
+            a {
+                font-size: 18px;
+        
+                @include hover {
+                    color: var(--color-accent);
+                }
+            }
+    }
+
+    &__description{
+        max-width: 220px;
+        line-height: 22px;
+        color: var(--color-violet-alternate);
+        margin-bottom: 30px;
+
+        @include mobile{
+            max-width: 100%;
+            text-align: justify;
+        }
+    }
+
+    &__socials{
+        display: flex;
+        gap: 10px;
+
+        &-item{
+            svg{
+                width: 20px;
+                aspect-ratio: 1;
+
+                path{
+                    stroke: var(--color-accent);
+                    transition: 0.3s;
+                }
+            }
+
+            @include hover{
+                svg{
+                    path{
+                        stroke: var(--color-violet-alternate);
+                    }
+                }
+            }
+        }
+    }
+
+    &__image{
+        position: absolute;
+        left: 57%;
+        top: 43%;
+
+        @include tablet{
+            display: none;
+        }
+    }
+}
+

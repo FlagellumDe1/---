@@ -1,0 +1,52 @@
+.footer{
+    background: var(--color-violet-alternate);
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block:30px ;
+
+    &__inner{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 900px){
+            flex-direction: column;
+        }
+    }
+
+    &__copyrights{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin-bottom: 30px;
+
+        &-text{
+            color: white;
+        }
+    }
+
+    &__agreements{
+        display: flex;
+        gap: 25px;
+
+        @media (max-width: 900px) {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+        a{
+            color: white;
+            transition: 0.3s;
+            display: block;
+            padding-block: 20px;
+
+            @include hover{
+                color: var(--color-accent);
+            }
+        }
+        
+    }
+}

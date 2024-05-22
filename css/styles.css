@@ -335,8 +335,8 @@ section {
 }
 
 .order-form {
-  width: 600px;
-  height: 500px;
+  max-width: 600px;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -359,12 +359,43 @@ section {
 }
 .order-form_small {
   max-width: 406px;
-  max-height: 428px;
+  min-height: 428px;
   position: relative;
+}
+.order-form_small input {
+  height: 40px;
+}
+.order-form_small .order-form__form {
+  row-gap: 15px;
 }
 @media (max-width: 870px) and (min-width: 769px) {
   .order-form_small {
     width: 300px;
+  }
+}
+.order-form_feedback {
+  max-width: 500px;
+  height: 560px;
+}
+.order-form_feedback input {
+  background-color: #E2E2E2;
+  height: 50px;
+}
+.order-form_feedback textarea {
+  background-color: #E2E2E2;
+  max-height: 140px;
+}
+.order-form_feedback button {
+  background-color: var(--color-violet) !important;
+}
+@media (max-width: 900px) {
+  .order-form_feedback {
+    max-width: 400px;
+  }
+}
+@media (max-width: 480px) {
+  .order-form_feedback {
+    max-width: 300px;
   }
 }
 .order-form_measuring {
@@ -408,7 +439,7 @@ section {
 }
 @media (max-width: 480px) {
   .order-form__form {
-    width: 200px;
+    width: 270px;
   }
 }
 .order-form__input {
@@ -430,6 +461,10 @@ section {
 }
 .order-form__input::placeholder {
   color: var(--color-violet);
+}
+.order-form__textarea {
+  resize: none;
+  height: 140px;
 }
 .order-form label {
   display: inline;
@@ -501,7 +536,9 @@ section {
 }
 .order-form_white input {
   background-color: #E2E2E2;
-  height: 40px;
+}
+.order-form_white textarea {
+  background-color: #E2E2E2;
 }
 .order-form_white .colored-text {
   color: #4B67AF;
@@ -516,9 +553,6 @@ section {
   padding: 0px;
   color: var(--color-violet);
   font-size: 18px;
-}
-.order-form_white .order-form__form {
-  row-gap: 15px;
 }
 
 .personal-info-link_violet {
@@ -1309,6 +1343,7 @@ section {
   align-items: center;
   flex-direction: column;
   border-radius: 7px;
+  margin-bottom: 80px;
 }
 @media (max-width: 768px) {
   .questions {
@@ -1386,4 +1421,225 @@ section {
   display: block;
   background-color: white;
   padding: 0 20px 20px 20px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+  margin-bottom: 0px !important;
+}
+.contacts__inner {
+  display: flex;
+  -moz-column-gap: 90px;
+       column-gap: 90px;
+}
+@media (max-width: 1024px) {
+  .contacts__inner {
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .contacts__inner {
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 15px;
+  }
+}
+.contacts__body {
+  position: relative;
+}
+@media (max-width: 768px) {
+  .contacts__body {
+    margin-bottom: 30px;
+  }
+}
+.contacts__tel {
+  margin-bottom: 50px;
+}
+.contacts__tel-title {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.contacts__tel-wrapper {
+  padding-left: 46px;
+  display: flex;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  position: relative;
+}
+@media (max-width: 1130px) {
+  .contacts__tel-wrapper {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+.contacts__tel-wrapper::before {
+  content: url("../media/icons/contacts-icon-tel.svg");
+  position: absolute;
+  left: 0px;
+}
+.contacts__tel a {
+  font-weight: 700;
+  font-size: 22px;
+  transition: 0.3s;
+}
+@media (hover: hover) {
+  .contacts__tel a:hover {
+    color: var(--color-accent);
+  }
+}
+@media (hover: none) {
+  .contacts__tel a:active {
+    color: var(--color-accent);
+  }
+}
+.contacts__location {
+  padding-left: 46px;
+  gap: 50px;
+  position: relative;
+  margin-bottom: 15px;
+}
+.contacts__location::before {
+  content: url("../media/icons/contacts-icon-place.svg");
+  position: absolute;
+  left: 0px;
+}
+.contacts__location a {
+  font-size: 18px;
+}
+@media (hover: hover) {
+  .contacts__location a:hover {
+    color: var(--color-accent);
+  }
+}
+@media (hover: none) {
+  .contacts__location a:active {
+    color: var(--color-accent);
+  }
+}
+.contacts__mail {
+  padding-left: 46px;
+  gap: 50px;
+  position: relative;
+  margin-bottom: 60px;
+}
+.contacts__mail::before {
+  content: url("../media/icons/contacts-icon-mail.svg");
+  position: absolute;
+  left: 0px;
+}
+.contacts__mail a {
+  font-size: 18px;
+}
+@media (hover: hover) {
+  .contacts__mail a:hover {
+    color: var(--color-accent);
+  }
+}
+@media (hover: none) {
+  .contacts__mail a:active {
+    color: var(--color-accent);
+  }
+}
+.contacts__description {
+  max-width: 220px;
+  line-height: 22px;
+  color: var(--color-violet-alternate);
+  margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .contacts__description {
+    max-width: 100%;
+    text-align: justify;
+  }
+}
+.contacts__socials {
+  display: flex;
+  gap: 10px;
+}
+.contacts__socials-item svg {
+  width: 20px;
+  aspect-ratio: 1;
+}
+.contacts__socials-item svg path {
+  stroke: var(--color-accent);
+  transition: 0.3s;
+}
+@media (hover: hover) {
+  .contacts__socials-item:hover svg path {
+    stroke: var(--color-violet-alternate);
+  }
+}
+@media (hover: none) {
+  .contacts__socials-item:active svg path {
+    stroke: var(--color-violet-alternate);
+  }
+}
+.contacts__image {
+  position: absolute;
+  left: 57%;
+  top: 43%;
+}
+@media (max-width: 1024px) {
+  .contacts__image {
+    display: none;
+  }
+}
+
+.footer {
+  background: var(--color-violet-alternate);
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 30px;
+}
+.footer__inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .footer__inner {
+    flex-direction: column;
+  }
+}
+.footer__copyrights {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.footer__copyrights-text {
+  color: white;
+}
+.footer__agreements {
+  display: flex;
+  gap: 25px;
+}
+@media (max-width: 900px) {
+  .footer__agreements {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.footer__agreements a {
+  color: white;
+  transition: 0.3s;
+  display: block;
+  padding-block: 20px;
+}
+@media (hover: hover) {
+  .footer__agreements a:hover {
+    color: var(--color-accent);
+  }
+}
+@media (hover: none) {
+  .footer__agreements a:active {
+    color: var(--color-accent);
+  }
 }/*# sourceMappingURL=styles.css.map */
