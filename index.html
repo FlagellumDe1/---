@@ -19,12 +19,12 @@
             </a>
             <nav class="header__nav hidden-mobile">
                 <ul class="header__nav-list">
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">Услуги</a></li>
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">Продукция</a></li>
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">О компании</a></li>
+                    <li class="header__nav-item"><a href="#services" class="header__nav-link">Услуги</a></li>
+                    <li class="header__nav-item"><a href="#products" class="header__nav-link">Продукция</a></li>
+                    <li class="header__nav-item"><a href="#about" class="header__nav-link">О компании</a></li>
                     <li class="header__nav-item"><a href="#" class="header__nav-link">Портфолио</a></li>
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">Вопрос-ответ</a></li>
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">Контакты</a></li>
+                    <li class="header__nav-item"><a href="#questions" class="header__nav-link">Вопрос-ответ</a></li>
+                    <li class="header__nav-item"><a href="#contacts" class="header__nav-link">Контакты</a></li>
                 </ul>
             </nav>
             <div class="header__button-wrapper">
@@ -37,7 +37,7 @@
         </div>
     </header>
     <main class="main">
-        <section class="hero">
+        <section class="hero" id="hero">
             <div class="hero__inner container">
                 <div class="hero__body">
                     <h2 class="hero__title">
@@ -83,7 +83,7 @@
                 </div>
             </div>
         </section>
-        <section class="services container">
+        <section class="services container" id="services">
             <h2 class="services__title section-title">
                 Наши услуги
             </h2>
@@ -149,7 +149,7 @@
                 </li>
             </ul>
         </section>
-        <section class="products container">
+        <section class="products container" id="products">
             <h2 class="products__title section-title">
                 Продукты
             </h2>
@@ -565,7 +565,7 @@
             <button class="button button__order-calculation button_standart" data-fancybox data-src="#order-form_calculation">Заказать
                 рассчет</button>
         </section>
-        <section class="about container">
+        <section class="about container" id="about">
             <h2 class="about__title section-title">О компании</h2>
             <nav class="about__sections">
                 <ul class="about__sections-list">
@@ -734,7 +734,7 @@
             <button class="button button__order-measuring button_standart" data-fancybox
                 data-src="#order-form_measuring">Оформить заявку на замер</button>
         </section>
-        <section class="questions container">
+        <section class="questions container" id="questions">
             <h2 class="questions__title section-title">
                 Вопрос-ответ
             </h2>
@@ -801,7 +801,7 @@
                 </li>
             </ul>
         </section>
-        <section class="contacts container">
+        <section class="contacts container" id="contacts">
             <h2 class="contacts__title section-title">Контакты</h2>
             <div class="contacts__inner">
                 <div class="contacts__body">
@@ -965,13 +965,13 @@
     <dialog class="mobile-overlay visible-mobile" id="mobileNavOverlay" >
         <button class="mobile-overlay__close" onclick="mobileNavOverlay.close()"></button>
         <nav class="mobile-overlay__nav">
-            <ul class="mobile-overlay__nav-list">
-                <li class="mobile-overlay__nav-item"><a href="#" class="mobile-overlay__nav-link">Услуги</a></li>
-                <li class="mobile-overlay__nav-item"><a href="#" class="mobile-overlay__nav-link">Продукция</a></li>
-                <li class="mobile-overlay__nav-item"><a href="#" class="mobile-overlay__nav-link">О компании</a></li>
+            <ul class="mobile-overlay__nav-list" onclick="mobileNavOverlay.close()">
+                <li class="mobile-overlay__nav-item"><a href="#services" class="mobile-overlay__nav-link">Услуги</a></li>
+                <li class="mobile-overlay__nav-item"><a href="#products" class="mobile-overlay__nav-link">Продукция</a></li>
+                <li class="mobile-overlay__nav-item"><a href="#about" class="mobile-overlay__nav-link">О компании</a></li>
                 <li class="mobile-overlay__nav-item"><a href="#" class="mobile-overlay__nav-link">Портфолио</a></li>
-                <li class="mobile-overlay__nav-item"><a href="#" class="mobile-overlay__nav-link">Вопрос-ответ</a></li>
-                <li class="mobile-overlay__nav-item"><a href="#" class="mobile-overlay__nav-link">Контакты</a></li>
+                <li class="mobile-overlay__nav-item"><a href="#questions" class="mobile-overlay__nav-link">Вопрос-ответ</a></li>
+                <li class="mobile-overlay__nav-item"><a href="#contacts" class="mobile-overlay__nav-link">Контакты</a></li>
             </ul>
         </nav>
     </dialog>

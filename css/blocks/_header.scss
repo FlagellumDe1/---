@@ -1,5 +1,8 @@
 .header{
+    position: fixed;
+    width: 100%;
     background-color: white;
+    z-index: 1000;
 
     @media(max-width: 1200px) {
             padding-top: 15px;

@@ -1,13 +1,18 @@
 .hero{
     background-image: linear-gradient(to right, rgba(21, 21, 43, 0.9) 100%, rgba(21, 21, 43, 0.9) 100%), url('../media/images/hero-background.png');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-position: bottom;
     color: white;
     font-size: 14px;
+    padding-top: 100px;
+
+    @media (max-width:1200px){
+        padding-top: 175px;
+    };
 
     @include mobile{
         background: #333349;
+        padding-top: 148px;
     }
 
     &__inner{

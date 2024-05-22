@@ -112,7 +112,10 @@ section {
 }
 
 .header {
+  position: fixed;
+  width: 100%;
   background-color: white;
+  z-index: 1000;
 }
 @media (max-width: 1200px) {
   .header {
@@ -566,14 +569,20 @@ section {
 .hero {
   background-image: linear-gradient(to right, rgba(21, 21, 43, 0.9) 100%, rgba(21, 21, 43, 0.9) 100%), url("../media/images/hero-background.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-position: bottom;
   color: white;
   font-size: 14px;
+  padding-top: 100px;
+}
+@media (max-width: 1200px) {
+  .hero {
+    padding-top: 175px;
+  }
 }
 @media (max-width: 768px) {
   .hero {
     background: #333349;
+    padding-top: 148px;
   }
 }
 .hero__inner {
