@@ -1,0 +1,18 @@
+.certificates{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+    padding: 100px;
+
+    img{
+        width: 190px;
+    }
+}
+
+.fancybox-image{
+    width: 800px !important;
+}

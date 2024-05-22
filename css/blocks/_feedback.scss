@@ -1,0 +1,58 @@
+.feedback{
+    width: 100%;
+    min-height: 460px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    
+    &__inner{
+        width: 100%;
+    }
+
+    &__card{
+        width: 100%;
+        padding: 100px;
+        display: flex;
+            flex-direction: column;
+            row-gap: 60px;
+            align-items: center;
+
+        @include tablet{
+            padding: 40px;
+        }
+
+        @include mobile{
+            padding: 15px;
+        }
+        overflow: hidden;
+    }
+
+    align-items: center;
+    &__head{
+        display: flex;
+        width: 100%;
+        column-gap: 50px;
+        align-items: baseline;
+
+        @include mobile-S{
+            flex-direction: column;
+            row-gap: 20px;
+        }
+    }
+
+    &__author{
+        color: var(--color-violet-alternate);
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    &__contract{
+        color: #8F8F8F;
+        font-size: 14px;
+    }
+
+    &__body{
+        width: 80%;
+        text-align: justify;
+    }
+}

@@ -38,9 +38,6 @@
         }
     }
 
-    &__catalog{
-        margin-bottom: 50px;
-    }
     &__swiper{
         width: 100%;
         margin-bottom: 55px;
@@ -76,7 +73,7 @@
         @include mobile {
             flex-direction: column;
             padding: 15px;
-            min-height: 80vh;
+            min-height: 800px;
         }
 
         &-image{
@@ -225,4 +222,8 @@
             color: var(--color-accent);
         }
     }
+}
+
+.swiper-pagination-bullet-active{
+  background: var(--color-accent);
 }
