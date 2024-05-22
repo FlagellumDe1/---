@@ -1299,4 +1299,91 @@ section {
 .feedback__body {
   width: 80%;
   text-align: justify;
+}
+
+.questions {
+  background: var(--color-accent);
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 7px;
+}
+@media (max-width: 768px) {
+  .questions {
+    padding: 30px 40px;
+  }
+}
+@media (max-width: 480px) {
+  .questions {
+    padding: 30px 15px;
+  }
+}
+.questions__title {
+  color: white;
+}
+.questions__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.questions__list details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 3px;
+}
+.questions__list details[open] summary::after {
+  transform: rotate(-180deg);
+}
+.questions__list summary {
+  display: flex;
+  align-items: center;
+  padding: 30px 50px 30px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-violet-alternate);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  position: relative;
+}
+.questions__list summary::after {
+  content: url("data:image/svg+xml,%3Csvg width='30' height='17' viewBox='0 0 30 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.70605L15 15.7061L29 1.70605' stroke='%232F2F51' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  transition: 0.3s;
+  position: absolute;
+  right: 30px;
+  top: 36px;
+}
+@media (max-width: 1024px) {
+  .questions__list summary::after {
+    right: 10px;
+  }
+}
+@media (hover: hover) {
+  .questions__list summary:hover {
+    color: var(--color-accent);
+  }
+  .questions__list summary:hover::after {
+    content: url("data: image/svg+xml, %3Csvg width='30' height='17' viewBox='0 0 30 17' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M1 1.70605L15 15.7061L29 1.70605' stroke='%23EF7F1A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E%0A");
+  }
+}
+@media (hover: none) {
+  .questions__list summary:active {
+    color: var(--color-accent);
+  }
+  .questions__list summary:active::after {
+    content: url("data: image/svg+xml, %3Csvg width='30' height='17' viewBox='0 0 30 17' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M1 1.70605L15 15.7061L29 1.70605' stroke='%23EF7F1A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E%0A");
+  }
+}
+.questions__list p {
+  display: block;
+  background-color: white;
+  padding: 0 20px 20px 20px;
 }/*# sourceMappingURL=styles.css.map */

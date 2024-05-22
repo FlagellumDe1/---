@@ -60,3 +60,17 @@ function changeSection(event) {
     sectionSwiper.classList.add('active');
 
 }
+
+
+//QUESTIONS HANDLER
+
+const questionsList = document.querySelectorAll('.questions__list details');
+
+for (let questionItem of questionsList){
+    questionItem.addEventListener('click', closePreviousItem)
+}
+
+function closePreviousItem(event){
+    let previousItem = document.querySelector('.questions__list details[open]');
+        previousItem.open = false;
+}
